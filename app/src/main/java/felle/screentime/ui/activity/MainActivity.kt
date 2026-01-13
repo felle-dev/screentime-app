@@ -455,37 +455,11 @@ class MainActivity : AppCompatActivity() {
                 makeAccessibilityInfoDialog("Usage Tracker", UsageTrackingService::class.java)
             }
         }
-
         binding.setupMonochrome.setOnClickListener {
             TweakGrayScaleMode(savedPreferencesLoader).show(
                 supportFragmentManager,
                 "tweak_monochrome"
             )
-        }
-
-        // socials click listeners
-        binding.btnDiscord.setOnClickListener {
-            openUrl("https://discord.com/invite/Vs9mwUtuCN")
-        }
-
-        binding.btnTelegram.setOnClickListener {
-            openUrl("https://t.me/screentime6")
-        }
-        binding.btnGithub.setOnClickListener {
-            openUrl("https://github.com/felle6/screentime")
-        }
-        binding.btnInstagram.setOnClickListener {
-            openUrl("https://www.instagram.com/screentime.app")
-        }
-        binding.btnDonate.setOnClickListener {
-            openUrl("https://screentime.life/donate")
-        }
-
-        binding.btnCredits.setOnClickListener {
-            openUrl("https://screentime.life/credits")
-        }
-        binding.btnBackup.setOnClickListener {
-            ZipUtils.showDirectoryPicker(directoryPicker)
         }
         binding.helpReelBlocker.setOnClickListener {
             MaterialAlertDialogBuilder(this)
@@ -493,13 +467,6 @@ class MainActivity : AppCompatActivity() {
                 .setMessage(getString(R.string.this_option_has_the_ability_to_block_youtube_shorts_and_instagram_reels_while_allowing_access_to_other_app_features))
                 .setPositiveButton(getString(R.string.ok), null)
                 .show()
-        }
-
-        binding.btnBackup.setOnClickListener {
-            ZipUtils.showDirectoryPicker(directoryPicker)
-        }
-        binding.btnShareErrors.setOnClickListener {
-            shareCrashLog(this)
         }
     }
 

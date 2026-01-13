@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "felle.screentime",
+  "variantName": "liteRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 23,
+      "versionName": "2.3-alpha-lite",
+      "outputFile": "app-lite-universal-release-unsigned.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/app-lite-universal-release-unsigned.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/app-lite-universal-release-unsigned.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 26
+}

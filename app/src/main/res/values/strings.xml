@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">ScreenTime</string>
+    <string name="app_name" translatable="false">Screen Time</string>
     <string name="launcher_options">Launcher Options</string>
     <string name="focus_mode">Focus Mode</string>
     <string name="app_blocker">App Blocker</string>
