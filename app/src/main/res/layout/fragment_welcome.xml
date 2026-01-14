@@ -28,7 +28,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                app:cardCornerRadius="32dp"
                 app:cardElevation="8dp">
 
                 <ImageView
@@ -46,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Welcome to screentime"
+                android:text="Welcome to Screen Time"
                 android:textColor="?attr/colorOnSurface"
                 android:textStyle="bold" />
 
@@ -60,29 +59,8 @@
                 android:gravity="center"
                 android:letterSpacing="0.02"
                 android:lineSpacingMultiplier="1.2"
-                android:text="You're among the first to try screentime, an app designed to help you take control of your screen time in a fun and engaging way. 🚀\n\nSince we're still in beta, you might encounter a few rough edges—we'd love your feedback to make screentime even better!\n\nLet's start your journey to a healthier digital balance. 🎯"
+                android:text="You're among the first to try Screen Time, an app designed to help you take control of your screen time in a fun and engaging way. "
                 android:textColor="?attr/colorOnSurfaceVariant" />
-
-            <Button
-                android:id="@+id/open_tos"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="Read Terms and Conditions" />
-
-            <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/cb_tos"
-                style="@style/Widget.Material3.CompoundButton.CheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="By pressing Next, you agree to our Terms and Conditions"
-                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:visibility="visible" />
 
         </LinearLayout>
     </ScrollView>
@@ -96,13 +74,12 @@
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- Standardized next button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next"
             style="@style/Widget.Material3.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:enabled="false"
+            android:enabled="true"
             android:text="@string/next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
