@@ -135,8 +135,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-
         // Listen for Shizuku permission results
         Shizuku.addRequestPermissionResultListener { requestCode, resultCode ->
             if (requestCode == 0 && resultCode == PackageManager.PERMISSION_GRANTED) {
@@ -155,7 +153,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("fragment", WelcomeFragment.FRAGMENT_ID)
             startActivity(intent, options.toBundle())
         }
-        showDonationDialog()
     }
 
     override fun onDestroy() {
@@ -636,45 +633,6 @@ class MainActivity : AppCompatActivity() {
         binding.selectMonochromeApps.isEnabled = isShizukuOn
     }
 
-    private fun showDonationDialog() {
-        val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
-        val firstDate = sharedPreferences.getString("first_date", null)
-        if (firstDate == null) {
-            // Store the current date as a string representation
-            val currentDateString = LocalDate.now().toString()
-            sharedPreferences.edit().putString("first_date", currentDateString).apply()
-        }
-
-        if (!(sharedPreferences.getBoolean("is_donation_alerted", false))) {
-            // Parse the stored date string back to LocalDate
-            val storedFirstDate = firstDate?.let { LocalDate.parse(it) } ?: LocalDate.now()
-            val daysPassed = ChronoUnit.DAYS.between(storedFirstDate, LocalDate.now())
-
-            Log.d("days passed", daysPassed.toString())
-            if (daysPassed > 5L) {
-                sharedPreferences.edit().putBoolean("is_donation_alerted", true).apply()
-                MaterialAlertDialogBuilder(this)
-                    .setTitle("Consider Donating?")
-                    .setMessage(
-                        "Hello, this is felle, the creator of screentime. I'm a 17-year-old high school student with a passion for technology and computers. " +
-                                "A few months ago, I couldn't find any free app blocker solution that perfectly suited my needs, so I decided to build screentime myself. " +
-                                "I have a strong vision for screentime, including integrating gamification features. However, I may have to unfortunately halt this project due to a lack of funding. " +
-                                "If you find screentime useful, please consider donating even a small amount to support its continued development. Thank you!"
-                    )
-                    .setNegativeButton("Close") { dialog, _ ->
-                        dialog.dismiss()
-
-
-                    }
-                    .setPositiveButton("Donate") { dialog, _ ->
-                        openUrl("https://screentime.life/donate")
-                        dialog.dismiss()
-                    }
-                    .setCancelable(false)
-                    .show()
-            }
-        }
-    }
     private fun isFirstLaunchComplete(): Boolean {
         val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
         return sharedPreferences.getBoolean("isFirstLaunchComplete", false)
