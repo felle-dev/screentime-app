@@ -9,7 +9,7 @@
         android:id="@android:id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/widget_background"
+        android:background="@android:color/transparent"
         android:orientation="vertical"
         android:padding="16dp"
         android:weightSum="7">
@@ -27,7 +27,7 @@
                 android:layout_weight="1"
                 android:text="Screen time"
                 style="@style/TextAppearance.Material3.BodyMedium"
-                android:textColor="?android:attr/textColorPrimary" />
+                android:textColor="#FFFFFF" />
 
             <ImageView
                 android:id="@+id/refresh_stats_screentime"
@@ -35,7 +35,7 @@
                 android:layout_height="25dp"
                 android:contentDescription="Refresh stats"
                 android:src="@drawable/baseline_refresh_24"
-                android:tint="?android:attr/colorAccent" />
+                android:tint="#FFFFFF" />
         </LinearLayout>
 
         <TextView
@@ -49,7 +49,7 @@
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="0h 0m"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
         <TextView
@@ -62,7 +62,7 @@
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="1h App"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="#FFFFFF" />
 
 
         <TextView
@@ -75,7 +75,7 @@
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="1h App"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="#FFFFFF" />
 
 
         <TextView
@@ -88,7 +88,7 @@
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="1h App"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </FrameLayout>

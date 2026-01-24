@@ -6,7 +6,7 @@
     <string name="view_reel_blocker">View/Reel Blocker</string>
     <string name="keyword_blocker">Keyword Blocker (BETA)</string>
     <string name="anti_uninstall">Anti Uninstall</string>
-    <string name="usage_tracker">Usage Tracker (BETA)</string>
+    <string name="usage_tracker">Usage Tracker</string>
     <string name="disabled">Disabled</string>
     <string name="select_pinned_apps">Select pinned apps</string>
     <string name="warning_launcher_settings">Set screentime as the default launcher to access this option</string>
